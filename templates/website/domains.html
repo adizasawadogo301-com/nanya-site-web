@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+
+{% block title %}Nos domaines d’intervention — NANYA{% endblock %}
+
+{% block content %}
+<section class="page">
+    <div class="wrap">
+        <small>NOTRE EXPERTISE</small>
+        <h1>Nos domaines d’intervention</h1>
+        <p>Découvrez les domaines d’intervention du cabinet NANYA.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="grid">
+            {% for domain in domains %}
+            <article class="card">
+                <span>0{{ forloop.counter }}</span>
+                <h2>{{ domain.name }}</h2>
+                <a href="{% url 'domain_detail' domain.slug %}">Découvrir ce domaine →</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}{{ domain.name }} — NANYA{% endblock %}
+
+{% block content %}
+<section class="page">
+    <div class="wrap">
+        <small>DOMAINE D’INTERVENTION</small>
+        <h1>{{ domain.name }}</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap domain-detail">
+        <div class="domain-image">
+            <img src="{% static domain.image %}" alt="Image du domaine {{ domain.name }}">
+            <p>Image officielle du domaine à ajouter.</p>
+        </div>
+        <div>
+            <p class="lead">Cette page est dédiée au domaine « {{ domain.name }} ».</p>
+            <p>Les contenus détaillés et les images officielles seront ajoutés à partir des éléments validés par NANYA.</p>
+            <a class="btn" href="{% url 'service_request' %}">Faire une demande de service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

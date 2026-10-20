@@ -1,0 +1,53 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Partenaires — NANYA{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="container">
+    <h1>Ils nous font confiance</h1>
+    <p>Les entreprises et organisations qui travaillent avec NANYA.</p>
+
+    <div class="partners-grid">
+      {% for partner in partners %}
+        <div class="partner-card">
+          {% if partner.logo %}
+            <img src="{% static partner.logo %}" alt="{{ partner.name }}" loading="lazy">
+          {% else %}
+            <span class="partner-name" style="color: #1f2937;">{{ partner.name }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .partner-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+  }
+  .partner-card img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+  }
+  .partner-name {
+    font-weight: 600;
+    text-align: center;
+  }
+</style>
+{% endblock %}

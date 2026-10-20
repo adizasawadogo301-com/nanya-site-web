@@ -1,0 +1,45 @@
+{% extends "website/base.html" %}
+
+{% block title %}NANYA — Cabinet conseil{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="wrap hero-in">
+        <div>
+            <small>CABINET CONSEIL</small>
+            <h1>NANYA, votre partenaire dans vos décisions d’investissement et de développement.</h1>
+            <p>Notre cabinet conseil NANYA accompagne ses clients d’Afrique à chaque étape de leurs processus de décision d’investissement et de développement.</p>
+            <a class="btn" href="{% url 'domains' %}">Découvrir nos domaines</a>
+            <a class="btn ghost" href="{% url 'contact' %}">Nous contacter</a>
+        </div>
+        <div class="hero-art">
+            <span>N</span>
+            <p>CONSEIL · FINANCE · AUDIT · INVESTISSEMENT</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <small>NOTRE EXPERTISE</small>
+        <h2>Nos domaines d’intervention</h2>
+        <div class="grid">
+            {% for domain in domains %}
+            <article class="card">
+                <span>0{{ forloop.counter }}</span>
+                <h3>{{ domain.name }}</h3>
+                <a href="{% url 'domain_detail' domain.slug %}">En savoir plus →</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="dark">
+    <div class="wrap center">
+        <small>UN PROJET ?</small>
+        <h2>Parlons de vos besoins.</h2>
+        <a class="btn light" href="{% url 'service_request' %}">Faire une demande de service</a>
+    </div>
+</section>
+{% endblock %}

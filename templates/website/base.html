@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NANYA — Cabinet conseil">
+    <title>{% block title %}NANYA — Cabinet conseil{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+</head>
+<body>
+<header>
+    <div class="wrap nav">
+        <a class="logo" href="{% url 'home' %}">NANYA</a>
+        <button id="toggle" type="button" aria-label="Ouvrir le menu">☰</button>
+        <nav id="nav">
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'about' %}">À propos</a>
+            <a href="{% url 'domains' %}">Domaines</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'partners' %}">Partenaires</a>
+            <a href="{% url 'realizations' %}">Réalisations</a>
+            <a class="cta" href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </div>
+</header>
+
+{% if messages %}
+<div class="wrap msgs">
+    {% for message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+<footer>
+    <div class="wrap foot">
+        <div>
+            <b>NANYA</b>
+            <p>Cabinet conseil accompagnant ses clients dans leurs processus de décision d’investissement et de développement.</p>
+        </div>
+        <div>
+            <b>Navigation</b>
+            <a href="{% url 'domains' %}">Domaines d’intervention</a>
+            <a href="{% url 'service_request' %}">Demande de service</a>
+            <a href="{% url 'location' %}">Coordonnées</a>
+        </div>
+        <div>
+            <b>Réseaux sociaux</b>
+            <p>Les liens officiels seront ajoutés après validation par NANYA.</p>
+        </div>
+    </div>
+    <div>
+<b> Contact</b>
+<P> Email: <a href="mailto:infonanyab@gmail.com">infonanyab@gmail.com</a></P>
+<p> Togo : +228 92 30 05 80 / +228 92 61 37 86</p>
+<p> Burundi : +257 76 13 69 27</p>
+    </div>
+</footer>
+<div>
+
+    
+<div class="copy">© {% now "Y" %} NANYA — Tous droits réservés.</div>
+<script src="{% static 'website/js/main.js' %}"></script>
+</body>
+</html>

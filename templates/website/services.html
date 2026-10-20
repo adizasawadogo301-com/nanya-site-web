@@ -1,0 +1,35 @@
+{% extends "website/base.html" %}
+
+{% block title %}Nos services — NANYA{% endblock %}
+
+{% block content %}
+<section class="page">
+    <div class="wrap">
+        <small>NOS SERVICES</small>
+        <h1>Nos services</h1>
+        <p>Découvrez les prestations proposées par le cabinet NANYA.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap narrow">
+        {% for service in services %}
+        <article class="service">
+            <span>0{{ forloop.counter }}</span>
+            <div>
+                <h2>{{ service.title }}</h2>
+                {% if service.intro %}<p>{{ service.intro }}</p>{% endif %}
+                {% if service.items %}
+                <ul>
+                    {% for item in service.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if service.extra %}<p>{{ service.extra }}</p>{% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
