@@ -62,6 +62,8 @@ def partners(request):
          None},
         {"name": "GS (Voyage)", "logo": 
          None},
+        {"name": "SOLIM (LOME-KARA-LOME)", "logo":
+         None},
     ]
     return render(request, "website/partners.html", {"partners": partners})
 
