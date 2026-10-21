@@ -32,19 +32,36 @@ def services(request):
 
 def partners(request):
     partners = [
-        {"name": "Sonacom", "logo": None},
-        {"name": "Sunu", "logo": None},
-        {"name": "GIZ", "logo": None},
-        {"name": "Steel Cube", "logo": None},
-        {"name": "WAPAC", "logo": None},
-        {"name": "Manumetal", "logo": None},
-        {"name": "Solo", "logo": None},
-        {"name": "Hydro Lub SP", "logo": None},
-        {"name": "MSTM", "logo": None},
-        {"name": "A-Finances", "logo": None},
-        {"name": "Tobometal", "logo": None},
-        {"name": "Fleximetal", "logo": None},
-        {"name": "Bizo-Health", "logo": None},
+        {"name": "Sonacom", "logo":
+         None},
+        {"name": "SUNU Bank", "logo":
+         None},
+        {"name": "GIZ", "logo":
+         None},
+        {"name": "STEEL CUBE", "logo": 
+         None},
+        {"name": "WAPAC", "logo":
+         None},
+        {"name": "MANUMETAL", "logo": 
+         None},
+        {"name": "Solo Tomate", "logo":
+         None},
+        {"name": "HYDRO LUB Sa", "logo":
+         None},
+        {"name": "MGTM (MEGA)", "logo":
+         None},
+        {"name": "A-Finances (Finance,Gestion & Stratégie)", "logo": 
+         None},
+        {"name": "TOROMETAL", "logo": 
+         None},
+        {"name": "FLEXIMETAL", "logo": 
+         None},
+        {"name": "BIZO-HEALTH", "logo":
+         None},
+        {"name": "LK", "logo":
+         None},
+        {"name": "GS (Voyage)", "logo": 
+         None},
     ]
     return render(request, "website/partners.html", {"partners": partners})
 
