@@ -1,6 +1,5 @@
 from pathlib import Path
-BASE_DIR = 
-Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY="replace-before-production"
 DEBUG=True
 ALLOWED_HOSTS = 
