@@ -2,8 +2,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY="replace-before-production"
 DEBUG=True
-ALLOWED_HOSTS = 
-["nanya-site-web.onrender.com"]
+ALLOWED_HOSTS = ["nanya-site-web.onrender.com"]
 INSTALLED_APPS=["django.contrib.admin","django.contrib.auth","django.contrib.contenttypes","django.contrib.sessions","django.contrib.messages","django.contrib.staticfiles","website"]
 MIDDLEWARE = [
   "django.middleware.security.SecurityMiddleware",
