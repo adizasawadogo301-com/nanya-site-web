@@ -12,7 +12,7 @@ MIDDLEWARE = [
   "django.middleware.csrf.CsrffViewMiddleware",
   "django.contrib.auth.middleware.AuthentificationMiddleware",
   "django.contrib.messages.middleware.MessageMiddleware",
-  "django.middileware.clickjacking.XFrameOptionsMiddleware",
+  "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 ROOT_URLCONF="config.urls"
 TEMPLATES = [
