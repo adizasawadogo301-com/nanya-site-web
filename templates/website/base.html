@@ -12,8 +12,11 @@
 <header>
     <div class="wrap nav">
         <a class="logo" href="{% url 'home' %}">NANYA</a>
+        <img src="{% static 'website/image/nanya_logo_recadre.jpg.jpeg'%}" alt="Logo NANYA">
+        <span>NANYA</span>
         <button id="toggle" type="button" aria-label="Ouvrir le menu">☰</button>
         <nav id="nav">
+        </a>
             <a href="{% url 'home' %}">Accueil</a>
             <a href="{% url 'about' %}">À propos</a>
             <a href="{% url 'domains' %}">Domaines</a>
