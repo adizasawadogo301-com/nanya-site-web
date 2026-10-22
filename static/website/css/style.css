@@ -55,3 +55,19 @@
     text-align: center;
     color: #1f2937;
   }
+/* Correction de l'en-tête NANYA */
+header {
+    background-color: #ffffff;
+}
+.logo img {
+    display: flex;
+    alingn-items: center;
+    gap: 10px;
+    color: #142b52;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a {
+    color: #142b52;
+}
