@@ -59,14 +59,16 @@
 header {
     background-color: #ffffff;
 }
-.logo img {
+.logo {
     display: flex;
     alingn-items: center;
-    gap: 10px;
-    color: #142b52;
-    font-size: 32px;
-    font-weight: bold;
     text-decoration: none;
+}
+.logo img {
+    width: 90px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
 }
 nav a {
     color: #142b52;
